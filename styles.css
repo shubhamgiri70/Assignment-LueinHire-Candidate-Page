@@ -1,0 +1,229 @@
+/* Global Styles */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Remove default margins and paddings */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default spacing for paragraphs */
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Remove default spacing for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Remove default spacing for lists */
+ul,
+ol,
+dl {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Remove default styling for form elements */
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Remove default styling for anchor tags */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default styling for images */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove default styling for tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 60px; /* To prevent content from being hidden behind the navbar */
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px 15px;
+  z-index: 1000;
+  box-shadow: 0px 2px 7px #d6d6d6;
+}
+
+.navbar .left {
+  display: flex;
+  align-items: center;
+}
+
+.logo a img {
+  width: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  margin-left: 16px;
+}
+
+.nav-links a {
+  color: #405;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+
+  .active {
+    background-color: #405;
+    color: white;
+  }
+}
+
+.nav-links a:hover {
+  background-color: #dedbdb;
+}
+
+.login-btn a {
+  color: white;
+  text-decoration: none;
+  color: #fb3917bd;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-btn a:hover {
+  background-color: #dedbdb;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/* Mobile-Friendly and Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .logo {
+    order: 2; /* Move logo to center */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .login-btn a {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo a {
+    font-size: 20px;
+  }
+}

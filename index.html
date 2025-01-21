@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Navbar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="left">
+        <div class="logo">
+          <a href="#">
+            <img
+              src="https://lueinhirejo8edbq3wl.cdn.e2enetworks.net/website/favicon/la_favicon.png"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Employer</a>
+          <a href="#" class="active">Candidate</a>
+          <a href="#">Pricing</a>
+          <a href="#">Blogs</a>
+          <a href="#">Contact Us</a>
+        </nav>
+      </div>
+      <div class="login-btn">
+        <a href="#">Login</a>
+      </div>
+    </header>
+    <main>
+      <h1>Content Goes Here</h1>
+    </main>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

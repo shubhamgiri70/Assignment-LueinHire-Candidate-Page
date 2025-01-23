@@ -3,48 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fixed Navbar</title>
+    <title>lueinhire Candidate page</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="navbar">
-      <div class="left">
-        <div class="logo">
-          <a href="#">
-            <img
-              src="https://lueinhirejo8edbq3wl.cdn.e2enetworks.net/website/favicon/la_favicon.png"
-              alt="logo"
-            />
-          </a>
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-
-        <nav class="nav-links">
-          <a href="#">Home</a>
-          <a href="#">Employer</a>
-          <a href="#" class="active">Candidate</a>
-          <a href="#">Pricing</a>
-          <a href="#">Blogs</a>
-          <a href="#">Contact Us</a>
+      <div>
+        <img
+          src="https://lueinhirejo8edbq3wl.cdn.e2enetworks.net/website/favicon/la_favicon.png"
+          alt="logo"
+        />
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Employer</a></li>
+            <li><a href="#" class="active">Candidate</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
         </nav>
       </div>
-      <div class="login-btn">
-        <a href="#">Login</a>
+      <div>
+        <a href="#" class="login">Login</a>
       </div>
     </header>
-    <main>
-      <h1>Content Goes Here</h1>
-    </main>
 
-    <script>
-      function toggleMenu() {
-        const navLinks = document.querySelector(".nav-links");
-        navLinks.classList.toggle("active");
-      }
-    </script>
+    <main class="hero-section">
+      <div class="container flex item-center">
+        <div class="content">
+          <h1>Creates a tailored first impression</h1>
+          <p>
+            Give the companies a chance to see the real YOU that is simply not
+            possible in a traditional resume. It gives you the floor and focuses
+            the attention on you and your skills—without the traditional
+            limitations of the paper.
+          </p>
+          <ul>
+            <li>Creates a tailored first impression</li>
+            <li>Showcases your personality and soft skills</li>
+            <li>Proves your ability to sell</li>
+            <li>Ensures visibility</li>
+            <li>Practice video interview and boost your interview skills</li>
+          </ul>
+          <a href="#" class="btn">Sign Up</a>
+        </div>
+        <div class="illustration">
+          <img
+            src="https://lueinhirejo8edbq3wl.cdn.e2enetworks.net/website/candidate_pages/Resume-amico3.png"
+            alt="Illustration"
+          />
+        </div>
+      </div>
+    </main>
+    <section>
+      <div class="content-section">
+        <div class="container">
+          <div class="section-header">
+            <h1>Why to create Video Resume</h1>
+            <p>When I already have a paper-based resume.</p>
+          </div>
+          <div class="flex item-center">
+            <div class="illustration">
+              <img
+                src="https://lueinhirejo8edbq3wl.cdn.e2enetworks.net/website/candidate_pages/1_stay_ahead_of_the_competition/Winners-amico.png"
+              />
+            </div>
+            <div class="text-content">
+              <h2>Great way to showcase your soft skills</h2>
+              <h3>STAY AHEAD OF THE COMPETITION</h3>
+              <p>
+                Create interactive Video Resume to engage with recruiters much
+                early in the hiring process.<br />
+                Share profiles with recruiters and create a great first
+                impression.<br />
+                Showcase your personality and soft skills.
+              </p>
+              <a href="#" class="btn">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

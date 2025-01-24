@@ -128,6 +128,11 @@ body {
   justify-content: space-between;
   padding: 10px 12px;
   box-shadow: 0px 2px 7px #d6d6d6;
+  z-index: 9;
+}
+
+.menu-bar {
+  display: none;
 }
 
 .navbar .left-section {
@@ -218,25 +223,27 @@ body {
   margin-bottom: 10px;
   position: relative;
   padding-left: 20px;
+  font-size: 0.8rem;
+  color: #1e306e;
 }
 
 .content ul li::before {
   content: "➜";
   position: absolute;
   left: 0;
-  color: #6a1b9a;
+  color: #1e306e;
 }
 
-/* Adjust the arrow of signup button */
 .btn-signup {
   color: #4a148c;
-  margin-top: 10px; /* Added margin-top here */
+  margin-top: 10px;
   padding: 10px 40px;
   border: 2px solid #4a148c;
   text-decoration: none;
   border-radius: 50px;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
 .btn-signup::before {
@@ -245,11 +252,9 @@ body {
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  /* width: 20px; */
   transition: all 0.3s ease;
 }
 
-/* On hover, move the arrow to the right */
 .btn-signup:hover::before {
   left: calc(100% - 30px);
 }
@@ -296,6 +301,10 @@ hr {
   margin-bottom: 10px;
 }
 
+.p-1 {
+  font-size: 0.9rem;
+}
+
 .text-content .p-2 {
   line-height: 1.6;
   font-size: 0.9rem;
@@ -320,7 +329,7 @@ hr {
 
 /* Footer Section */
 .footer {
-  background-color: #4a148c;
+  background-color: #405;
   color: #fff;
   padding: 40px 20px;
 }
@@ -390,7 +399,68 @@ hr {
 }
 
 /* Responsive Design */
+
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .menu-bar {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .hero-section div {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .hero-section .illustration {
+    max-width: 100%;
+  }
+
+  .content {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .content-section-mob {
+    flex-direction: column;
+    padding: 20px 0;
+
+    .illustration {
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .text-content {
+      max-width: 100%;
+    }
+  }
+
+  .content-section-mob2 {
+    flex-direction: column;
+    padding: 20px 0;
+
+    .illustration {
+      max-width: 100%;
+    }
+
+    .text-content {
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+
   .footer-container {
     flex-direction: column;
     align-items: center;
